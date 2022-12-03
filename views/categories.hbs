@@ -1,0 +1,39 @@
+ <div class="row">
+    <div class="col-md-12">
+        <h2>Categories</h2>
+        <a href="/categories/add" class="btn btn-success pull-right">Add Category</a>
+        <hr />
+        <div class="table-responsive">
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th>Category&nbsp;ID</th>
+                        <th>Category</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {{#each categories}}
+                    <tr>
+                        <td> <a href="/posts?category={{id}}" +  >{{ id }}</a></td>
+                        <td> <a href="/posts?category={{id}}" >{{ category }}</a></td>
+                        <td><a href="categories/delete/{{id}}" class="btn btn-danger">Remove</a></td>
+                    </tr>
+                  {{~/each}}
+
+                  {{#unless categories}}
+                  <div class="col-md-12 text-center">
+                    <strong>{{message}}</strong>
+                  </div>
+                  {{/unless}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+</div>
+</div>
